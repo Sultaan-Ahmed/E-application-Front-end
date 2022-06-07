@@ -2,29 +2,3 @@
   margin: 0;
   padding: 0;
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: #8ec5fc;
-  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
-}
-h1 {
-  color: rgb(158, 41, 20);
-  font-size: 2vmax;
-  font-weight: 800;
-  font-style: italic;
-  margin-bottom: 1vmax;
-  border-bottom: 0.1vmax solid rgb(158, 41, 20);
-}
-p {
-  color: black;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: 800;
-  font-size: 1.5vmax;
-  margin: 1vmax;
-}
