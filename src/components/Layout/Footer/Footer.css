@@ -52,3 +52,6 @@ footer {
   transition: all 0.5s ease;
   margin: 0.5vmax;
 }
+.rightFooter > a:hover {
+  color: tomato;
+}

@@ -1,0 +1,46 @@
+.banner {
+  background-image: url("../../images//cover.jfif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.banner > h1 {
+  margin: 5vmax;
+  font: 300 2.5vmax "Arial";
+}
+.banner > p {
+  font: 300 1.4vmax "Arial";
+}
+.banner > a > button {
+  margin-bottom: 5vmax;
+  cursor: pointer;
+  border-color: white;
+  border: 1px solid white;
+  border-radius: 0;
+  padding: 1vmax;
+  transition: all 0.5s ease;
+  width: 9vmax;
+  font: 500 1vmax "Arial";
+}
+.banner > a > button:hover {
+  background-color: tomato;
+  color: black;
+}
+.banner::after {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  clip-path: polygon(100% 68%, 0 100%, 100% 100%);
+  max-width: 100%;
+}
