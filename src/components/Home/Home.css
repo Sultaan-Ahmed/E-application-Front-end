@@ -44,3 +44,76 @@
   clip-path: polygon(100% 68%, 0 100%, 100% 100%);
   max-width: 100%;
 }
+.homeHeading {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4vmax;
+  border-bottom: 3px solid tomato;
+  width: 20vmax;
+  padding: 1vmax;
+  margin: 5vmax auto;
+  color: tomato;
+}
+.container {
+  display: flex;
+  margin: 2vmax auto;
+  width: 80vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+.productCard {
+  width: 14vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(68, 47, 47);
+  margin: 2vmax;
+  transition: all 0.5s ease;
+  padding-bottom: 0.5vmax;
+}
+.productCard > img {
+  width: 14vmax;
+}
+.productCard > div {
+  margin: 0.5vmax;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center !important;
+}
+.productCard > p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2vmax;
+  margin: 1vmax 0.5vmax;
+  margin-bottom: 0;
+}
+.productCardSpan {
+  margin: 0.5vmax;
+  font: 300 0.7vmax "Arial";
+}
+.productCard > span {
+  margin: 00.5vmax;
+  color: tomato;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1vmax;
+}
+.productCard:hover {
+  box-shadow: 1px 1px 5px tomato;
+  transform: translateY(-1vmax);
+}
+@media screen and (max-width: 600px) {
+  .productCard > p {
+    font-size: 1.7vmax;
+  }
+  .productCard > div {
+    margin: 0;
+    display: block;
+  }
+  .productCard > span {
+    font-size: 1.6vmax;
+  }
+  .productCard > div > span {
+    margin: 0 0.5vmax;
+    font: 300 1vmax "Arial";
+  }
+}

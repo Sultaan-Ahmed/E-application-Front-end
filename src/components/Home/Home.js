@@ -1,6 +1,8 @@
 import React from "react";
 import "./Home.css";
+import ProductCard from "./ProductCard";
 const Home = () => {
+  const products = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return (
     <>
       <div className="banner">
@@ -13,7 +15,7 @@ const Home = () => {
       {/* Features products showing start */}
       <h2 className="homeHeading">Featured Products.</h2>
       <div className="container" id="container">
-        <p>Products will add here.</p>
+        {products && products.map((item) => <ProductCard key={item} />)}
       </div>
     </>
   );
