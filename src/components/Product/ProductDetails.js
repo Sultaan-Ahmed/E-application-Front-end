@@ -60,51 +60,53 @@ const ProductDetails = () => {
               ))}
           </Carousel>
         </div>
-        <div className="detailsBlock-1">
-          <h2>{product.name}</h2>
-          <p>product # {product._id}</p>
-        </div>
-        <div className="detailsBlock-2">
-          <ReactStars
-            count={5}
-            size={14}
-            activeColor="tomato"
-            isHalf={true}
-            value={4.5}
-            edit={false}
-          />
-          <span className="detailsBlock-2-span">
-            ({product.numOfReviews} Reviews)
-          </span>
-        </div>
-        <div className="detailsBlock-3">
-          <h1>{`$${product.price}`}</h1>
-          <div className="detailsBlock-3-1">
-            <div className="detailsBlock-3-1-1">
-              <button onClick={decreaseQuantity}>-</button>
-              <input type="number" value={quantity} readOnly />
-              <button onClick={increaseQuantity}>+</button>
-            </div>
-            <button
-              disabled={product.stock < 1 ? true : false}
-              onClick={addToCartHandler}
-            >
-              Add to Cart
-            </button>
+        <div>
+          <div className="detailsBlock-1">
+            <h2>{product.name}</h2>
+            <p>product # {product._id}</p>
           </div>
-          <p>
-            Status:
-            <b className={product.stock < 1 ? "redColor" : "greenColor"}>
-              {product.stock < 1 ? "Out of Stock" : "In Stock"}
-            </b>
-          </p>
+          <div className="detailsBlock-2">
+            <ReactStars
+              count={5}
+              size={14}
+              activeColor="tomato"
+              isHalf={true}
+              value={4.5}
+              edit={false}
+            />
+            <span className="detailsBlock-2-span">
+              ({product.numOfReviews} Reviews)
+            </span>
+          </div>
+          <div className="detailsBlock-3">
+            <h1>{`$${product.price}`}</h1>
+            <div className="detailsBlock-3-1">
+              <div className="detailsBlock-3-1-1">
+                <button onClick={decreaseQuantity}>-</button>
+                <input type="number" value={quantity} readOnly />
+                <button onClick={increaseQuantity}>+</button>
+              </div>
+              <button
+                disabled={product.stock < 1 ? true : false}
+                onClick={addToCartHandler}
+              >
+                Add to Cart
+              </button>
+            </div>
+            <p>
+              Status:
+              <b className={product.stock < 1 ? "redColor" : "greenColor"}>
+                {product.stock < 1 ? "Out of Stock" : "In Stock"}
+              </b>
+            </p>
+          </div>
+          <div className="detailsBlock-4">
+            Description:<p>{product.description}</p>
+          </div>
+          <button onClick={submitReviewToggle} className="submitReview">
+            Submit Review
+          </button>
         </div>
-        <div className="detailsBlock-4">
-          Description:<p>{product.description}</p>
-        </div>
-        <button onClick={submitReviewToggle} className="submitReview">
-          Submit Review
-        </button>
       </div>
     </>
   );
