@@ -1,5 +1,5 @@
 import { Slider, Typography } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 import Pagination from "react-js-pagination";
 import ProductCard from "../Home/ProductCard";
 import "./Products.css";
@@ -28,6 +28,7 @@ const Products = () => {
 
   const priceHandler = (e) => {
     setPrice(e.target.value);
+    console.log(cat);
   };
   return (
     <>
