@@ -11,11 +11,13 @@ const options = {
   link1Text: "Home",
   link2Text: "Products",
   link3Text: "Search",
-  link4Text: "About",
+  link4Text: "Login",
+
   link1Url: "/",
   link2Url: "/products",
   link3Url: "/search",
-  link4Url: "/about",
+  link4Url: "/login",
+
   link1Size: "1.3vmax",
   link1Color: "rgba(35, 35, 35,0.8)",
   nav1justifyContent: "flex-end",
