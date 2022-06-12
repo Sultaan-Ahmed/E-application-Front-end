@@ -16,6 +16,7 @@ const ReviewCard = () => {
           readOnly={true}
           precision={0.5}
         />
+        <span className="reviewCardComment">{review.comment}</span>
       </div>
     </>
   );

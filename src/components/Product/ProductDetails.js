@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  Rating,
+} from "@mui/material";
+import { useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import ReactStars from "react-rating-stars-component";
 import productLink from "../../images/product.jpeg";
 import "./ProductDetails.css";
+import ReviewCard from "./ReviewCard";
 const ProductDetails = () => {
+  const [open, setOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
+
   const decreaseQuantity = () => {
     if (1 >= quantity) {
       return;
@@ -23,8 +33,14 @@ const ProductDetails = () => {
     alert("Add to cart successful.");
   };
   //   we will do review toggle handler next
+  const reviewSubmitHandler = () => {
+    setOpen(!open);
+    // Further add backend logic here.
+  };
+  const [comment, setComment] = useState("");
+  const [rating, setRating] = useState(0);
   const submitReviewToggle = () => {
-    alert("I wil do this part next time. Now I am tired.");
+    setOpen(!open);
   };
   const product = {
     _id: "123545556544658585524541",
@@ -42,6 +58,20 @@ const ProductDetails = () => {
       productLink,
       productLink,
       productLink,
+    ],
+    reviews: [
+      {
+        id: 1,
+      },
+      {
+        id: 2,
+      },
+      {
+        id: 3,
+      },
+      {
+        id: 4,
+      },
     ],
   };
   return (
@@ -108,6 +138,41 @@ const ProductDetails = () => {
           </button>
         </div>
       </div>
+      <h3 className="reviewsHeading">REVIEWS. </h3>
+      <Dialog
+        aria-labelledby="simple-dialog-box"
+        open={open}
+        onClose={submitReviewToggle}
+      >
+        <DialogContent className="submitDialog">
+          <Rating onChange={(e) => setRating(e.target.value)} value={rating} />
+          <textarea
+            className="submitDialogTextArea"
+            cols={30}
+            rows={5}
+            value={comment}
+            onChange={(e) => {
+              setComment(e.target.value);
+            }}
+          ></textarea>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={submitReviewToggle} color="secondary">
+            Cancel
+          </Button>
+          <Button onClick={reviewSubmitHandler} color="primary">
+            Submit
+          </Button>
+        </DialogActions>
+      </Dialog>
+      {product.reviews ? (
+        <div className="reviews">
+          {product.reviews &&
+            product.reviews.map((rev) => <ReviewCard key={rev.id} />)}
+        </div>
+      ) : (
+        <p className="noReviews">No Reviews Yet</p>
+      )}
     </>
   );
 };
