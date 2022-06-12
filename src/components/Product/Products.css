@@ -14,3 +14,82 @@
   justify-content: center;
   min-height: 30vh;
 }
+.paginationBox {
+  display: flex;
+  justify-content: center;
+  margin: 6vmax;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.page-item {
+  background-color: white;
+  list-style-type: none;
+  padding: 1vmax 1.5vmax;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.185);
+}
+.page-item:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.page-item:last-child {
+  border-radius: 0 5px 5px 0;
+}
+.page-link {
+  text-decoration: none;
+  font: 500 0.7vmax "Roboto";
+  color: rgb(87, 87, 87);
+  transition: all 0.5s ease;
+}
+.page-item:hover {
+  background-color: tomato;
+}
+.page-item:hover .page-link {
+  color: black;
+}
+.pageItemActive {
+  background-color: tomato;
+}
+.pageLinkActive {
+  color: white;
+}
+.filterBox {
+  width: 10vmax;
+  position: absolute;
+  top: 10vmax;
+  left: 4vmax;
+}
+
+.categoryBox {
+  padding: 0%;
+}
+.category-link {
+  list-style-type: none;
+  color: rgba(0, 0, 0, 0.651);
+  font: 500 1.2vmax "Roboto";
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.category-link:hover {
+  color: tomato;
+}
+.filterBox > fieldset {
+  border: 1px solid rgba(0, 0, 0, 0.356);
+  padding: 0 1vmax;
+}
+@media screen and (max-widht: 600px) {
+  .filterBox {
+    width: 20vmax;
+    position: static;
+    margin: auto;
+  }
+  .page-link {
+    font: 400 1.7vmax "Roboto";
+  }
+  .category-link {
+    font: 400 1.8vmax "Roboto";
+  }
+}
