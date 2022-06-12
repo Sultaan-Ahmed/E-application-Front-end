@@ -75,6 +75,7 @@ const Products = () => {
             max={5}
           />
         </fieldset>
+        {/* for commit */}
       </div>
       {resultPerPage > count && (
         <div className="paginationBox">
