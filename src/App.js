@@ -8,11 +8,13 @@ import Products from "./components/Product/Products";
 import Search from "./components/Product/Search";
 import ForgotPassword from "./components/user/ForgotPassword";
 import LoginSignUp from "./components/user/LoginSignUp";
+import Profile from "./components/user/Profile";
 function App() {
   return (
     <>
       <Header />
       <Routes>
+        <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<LoginSignUp />} />
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />

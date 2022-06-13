@@ -96,6 +96,7 @@ const LoginSignUp = ({ history, location }) => {
               />
             </div>
             <Link to="/password/forgot">Forget Password ?</Link>
+            <Link to="/profile">Profile</Link>
             <input type="submit" value="Login" className="loginBtn" />
           </form>
           {/* Login Form End */}
